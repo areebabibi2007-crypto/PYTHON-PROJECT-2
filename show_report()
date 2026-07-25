@@ -1,0 +1,36 @@
+def show_report():
+    print("\n==============================")
+    print("      EXPENSE DETAILED REPORT ")
+    print("==============================")
+
+    try:
+        with open("data.txt", "r") as file:
+            lines = file.readlines()
+
+        if not lines:
+            print("No expenses recorded yet.")
+            return
+
+        total = 0.0
+        print("\n--- Items Breakdown ---")
+
+        for line in lines:
+            line = line.strip()
+            if "," in line:
+                parts = line.split(",")
+                if len(parts) == 2:
+                    name, amount = parts
+                    item_amt = float(amount.strip())
+                    total += item_amt
+                    # Har item ko print karay ga:
+                    print(
+                        f"• {name.strip().capitalize()}: ${item_amt:.2f}"
+                    )
+
+        print("------------------------------")
+        # End par Grand Total dikhayega:
+        print(f" GRAND TOTAL EXPENSE: ${total:.2f}")
+        print("==============================")
+
+    except FileNotFoundError:
+        print("No expense file found. Please add an expense first!")

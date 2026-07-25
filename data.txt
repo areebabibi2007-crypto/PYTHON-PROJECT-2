@@ -1,0 +1,9 @@
+food,500.0
+transport,250.0
+shopping,1200.0
+food,500.0
+transport,250.0
+shopping,1200.0
+food,500.0
+transport,250.0
+shopping,1200.0
