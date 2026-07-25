@@ -10,6 +10,7 @@ as part of the Industrial Training Kit – Project 2.
 # 📌 PROJECT INFORMATION
 
 *Project Name:* Expense Tracker System
+
 Submitted by: Areeba Bibi
 
 *Project Number:* Project 2
